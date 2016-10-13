@@ -27,10 +27,16 @@ namespace Monty_Python_Store
         int spanishNumber;
         double subTotal;
         double Total;
+        double taxTotal;
+
+       
 
         public Form1()
         {
             InitializeComponent();
+            subtotalOutputlabel.Visible = false;
+            taxOutputlabel.Visible = false;
+            totalOutputlabel.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,11 +49,17 @@ namespace Monty_Python_Store
             spanishNumber = Convert.ToInt32(spanishTextbox.Text);
 
             subTotal = PARROT_COST * parrotNumber + HELMET_COST * helmetNumber + SILLY_WALK_COST * sillywalkNumber + ALBUM_COST * albumNumber + GRENADE_COST * grenadeNumber + SPANISH_COST * spanishNumber;
-            Total = subTotal * TAX;
+            taxTotal = subTotal * TAX;
+            Total = subTotal + taxTotal;
+
+            subtotalOutputlabel.Visible = true;
+            taxOutputlabel.Visible = true;
+            totalOutputlabel.Visible = true;
 
             subtotalOutputlabel.Text = "" + subTotal.ToString ("C");
-
-              
+            taxOutputlabel.Text = "" + taxTotal.ToString ("C");
+            totalOutputlabel.Text = "" + Total.ToString("C");
+                  
         }
     }
 }

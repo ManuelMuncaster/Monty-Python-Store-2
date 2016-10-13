@@ -48,6 +48,7 @@
             this.taxLabel = new System.Windows.Forms.Label();
             this.taxOutputlabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
+            this.totalOutputlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -222,18 +223,29 @@
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.ForeColor = System.Drawing.Color.White;
-            this.totalLabel.Location = new System.Drawing.Point(23, 349);
+            this.totalLabel.Location = new System.Drawing.Point(20, 349);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(31, 13);
+            this.totalLabel.Size = new System.Drawing.Size(34, 13);
             this.totalLabel.TabIndex = 18;
-            this.totalLabel.Text = "Total";
+            this.totalLabel.Text = "Total:";
+            // 
+            // totalOutputlabel
+            // 
+            this.totalOutputlabel.AutoSize = true;
+            this.totalOutputlabel.ForeColor = System.Drawing.Color.White;
+            this.totalOutputlabel.Location = new System.Drawing.Point(61, 349);
+            this.totalOutputlabel.Name = "totalOutputlabel";
+            this.totalOutputlabel.Size = new System.Drawing.Size(35, 13);
+            this.totalOutputlabel.TabIndex = 19;
+            this.totalOutputlabel.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(494, 441);
+            this.ClientSize = new System.Drawing.Size(494, 519);
+            this.Controls.Add(this.totalOutputlabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.taxOutputlabel);
             this.Controls.Add(this.taxLabel);
@@ -282,6 +294,7 @@
         private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label taxOutputlabel;
         private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label totalOutputlabel;
     }
 }
 
