@@ -47,7 +47,7 @@ namespace Monty_Python_Store
 
             subtotalOutputlabel.Text = "" + subTotal.ToString ("C");
 
-             
+              
         }
     }
 }
