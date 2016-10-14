@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brightsideoflife.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleshwound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frenchtaunt.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spanish_inquisition.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whathavetheromansdoneforus.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romans.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eric Idle - Always Look On The Bright Side Of Life - STEREO HQ.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knightsoftheroundtable.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
