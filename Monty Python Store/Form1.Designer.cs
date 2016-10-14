@@ -58,17 +58,18 @@
             this.errorChangelabel = new System.Windows.Forms.Label();
             this.errorValueslabel = new System.Windows.Forms.Label();
             this.receiptButton = new System.Windows.Forms.Button();
-            this.errorLabel2 = new System.Windows.Forms.Label();
+            this.errorChangelabel2 = new System.Windows.Forms.Label();
             this.neworderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Stencil Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(12, 9);
+            this.titleLabel.Location = new System.Drawing.Point(4, 9);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(181, 13);
+            this.titleLabel.Size = new System.Drawing.Size(366, 21);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Welcome to the Monty Python Store!";
             // 
@@ -342,15 +343,15 @@
             this.receiptButton.UseVisualStyleBackColor = true;
             this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
             // 
-            // errorLabel2
+            // errorChangelabel2
             // 
-            this.errorLabel2.AutoSize = true;
-            this.errorLabel2.ForeColor = System.Drawing.Color.White;
-            this.errorLabel2.Location = new System.Drawing.Point(151, 396);
-            this.errorLabel2.Name = "errorLabel2";
-            this.errorLabel2.Size = new System.Drawing.Size(124, 13);
-            this.errorLabel2.TabIndex = 29;
-            this.errorLabel2.Text = "You must enter numbers!";
+            this.errorChangelabel2.AutoSize = true;
+            this.errorChangelabel2.ForeColor = System.Drawing.Color.White;
+            this.errorChangelabel2.Location = new System.Drawing.Point(151, 396);
+            this.errorChangelabel2.Name = "errorChangelabel2";
+            this.errorChangelabel2.Size = new System.Drawing.Size(124, 13);
+            this.errorChangelabel2.TabIndex = 29;
+            this.errorChangelabel2.Text = "You must enter numbers!";
             // 
             // neworderButton
             // 
@@ -371,7 +372,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(743, 583);
             this.Controls.Add(this.neworderButton);
-            this.Controls.Add(this.errorLabel2);
+            this.Controls.Add(this.errorChangelabel2);
             this.Controls.Add(this.receiptButton);
             this.Controls.Add(this.errorValueslabel);
             this.Controls.Add(this.errorChangelabel);
@@ -440,7 +441,7 @@
         private System.Windows.Forms.Label errorChangelabel;
         private System.Windows.Forms.Label errorValueslabel;
         private System.Windows.Forms.Button receiptButton;
-        private System.Windows.Forms.Label errorLabel2;
+        private System.Windows.Forms.Label errorChangelabel2;
         private System.Windows.Forms.Button neworderButton;
     }
 }

@@ -36,9 +36,9 @@ namespace Monty_Python_Store
         double tenderedAmount;
         double change;
         double subTotal;
-        double Total;
+        double total;
         double taxTotal;
-        int ordernumber;
+        int orderNumber;
        
         public Form1()
         {
@@ -59,7 +59,7 @@ namespace Monty_Python_Store
             changeLabel.Visible = false;
             changeOutputlabel.Visible = false;
             receiptButton.Visible = false;
-            errorLabel2.Visible = false;
+            errorChangelabel2.Visible = false;
             neworderButton.Visible = false;
 
             //Sound plays at the start of the program
@@ -95,7 +95,7 @@ namespace Monty_Python_Store
                 //Math to calculate subtotal, taxtotal, and grandtotal
                 subTotal = PARROT_COST * parrotNumber + HELMET_COST * helmetNumber + SILLY_WALK_COST * sillywalkNumber + ALBUM_COST * albumNumber + GRENADE_COST * grenadeNumber + SPANISH_COST * spanishNumber;
                 taxTotal = subTotal * TAX;
-                Total = subTotal + taxTotal;
+                total = subTotal + taxTotal;
 
                 subtotalOutputlabel.Visible = true;
                 taxOutputlabel.Visible = true;
@@ -104,7 +104,7 @@ namespace Monty_Python_Store
                 //Printing out the totals onto the screen
                 subtotalOutputlabel.Text = "" + subTotal.ToString("C");
                 taxOutputlabel.Text = "" + taxTotal.ToString("C");
-                totalOutputlabel.Text = "" + Total.ToString("C");
+                totalOutputlabel.Text = "" + total.ToString("C");
 
                 Pen whitePen = new Pen(Color.White);
                 formGraphics.DrawLine(whitePen, 0, 400, 200, 400);
@@ -112,6 +112,17 @@ namespace Monty_Python_Store
             catch
             {   //Error messages pops up if there is a problem
                 errorValueslabel.Visible = true;
+                subtotalOutputlabel.Visible = false;
+                taxOutputlabel.Visible = false;
+                totalOutputlabel.Visible = false;
+                subtotalLabel.Visible = false;
+                taxLabel.Visible = false;
+                totalLabel.Visible = false;
+                tenderedLabel.Visible = false;
+                tenderedTextbox.Visible = false;
+                changeButton.Visible = false;
+                errorChangelabel.Visible = false;
+                errorChangelabel2.Visible = false;
             }
         }
 
@@ -122,28 +133,33 @@ namespace Monty_Python_Store
                 SoundPlayer player = new SoundPlayer(Properties.Resources.romans);
                 player.Play();
 
-                changeLabel.Visible = true;
                 tenderedAmount = Convert.ToInt32(tenderedTextbox.Text);
 
                 //Math to calculate change
-                change = tenderedAmount - Total;
+                change = tenderedAmount - total;
 
                 changeOutputlabel.Text = "" + change.ToString("C");
 
                 //if statments to determine if user pays enough money
-                if (tenderedAmount < Total)
+                if (tenderedAmount < total)
                     errorChangelabel.Visible = true;
-                changeOutputlabel.Text = "$" + change;
                 receiptButton.Visible = false;
                 changeOutputlabel.Visible = false;
-
-                if (tenderedAmount >= Total)
+                changeLabel.Visible = false;
+                changeOutputlabel.Text = "$" + change;
+               
+                if (tenderedAmount >= total)
                     errorChangelabel.Visible = false;
                 receiptButton.Visible = true;
                 changeOutputlabel.Visible = true;
+                changeLabel.Visible = true;
 
             }
-            catch { errorLabel2.Visible = true; }
+            catch { errorChangelabel2.Visible = true;
+                changeLabel.Visible = false;
+                changeOutputlabel.Visible = false;
+                receiptButton.Visible = false;
+            }
     }
 
         private void receiptButton_Click(object sender, EventArgs e)
@@ -155,7 +171,7 @@ namespace Monty_Python_Store
             Graphics fg = this.CreateGraphics();
 
             //Math to increase the order number by 1 each time user prints receipt while program is running
-            ordernumber = ordernumber + 1;
+            orderNumber = orderNumber + 1;
             
             //Setting up pens, brushes and fonts
             Pen whitePen = new Pen(Color.White);
@@ -171,7 +187,7 @@ namespace Monty_Python_Store
             Thread.Sleep(1000);
             fg.DrawString("Monty Python Store", blackFont, blackBrush, 450, 10);
             Thread.Sleep(1000);
-            fg.DrawString("Order Number: " + ordernumber, blackFont, blackBrush, 375, 40);
+            fg.DrawString("Order Number: " + orderNumber, blackFont, blackBrush, 375, 40);
             Thread.Sleep(1000);
             fg.DrawString("Date: October 14, 2016", blackFont, blackBrush, 375, 60);
             Thread.Sleep(1000);
@@ -191,7 +207,7 @@ namespace Monty_Python_Store
             Thread.Sleep(1000);
             fg.DrawString("Tax: $" + taxTotal, blackFont, blackBrush, 375, 250);
             Thread.Sleep(1000);
-            fg.DrawString("Total: $" + Total, blackFont, blackBrush, 375, 270);
+            fg.DrawString("Total: $" + total, blackFont, blackBrush, 375, 270);
             Thread.Sleep(1000);
             fg.DrawString("Tendered: $" + tenderedAmount, blackFont, blackBrush, 375, 300);
             Thread.Sleep(1000);
@@ -226,9 +242,24 @@ namespace Monty_Python_Store
             tenderedTextbox.Text = "0";
             changeOutputlabel.Text = "0";
 
-            Brush whiteBrush = new SolidBrush(Color.White);
+            tenderedAmount = 0;
+            change = 0;
+            subTotal = 0;
+            total = 0;
+            taxTotal = 0;
 
-            formGraphics.FillRectangle(whiteBrush, 375, 10, 300, 500);
+            parrotNumber = 0;
+            helmetNumber = 0;
+            sillywalkNumber = 0;
+            albumNumber = 0;
+            grenadeNumber = 0;
+            spanishNumber = 0;
+
+            Brush blackBrush = new SolidBrush(Color.Black);
+            Pen blackPen = new Pen (Color.Black);
+
+            formGraphics.FillRectangle(blackBrush, 375, 10, 300, 500);
+            formGraphics.DrawRectangle(blackPen, 375, 10, 300, 500);
         }
     }
 }
