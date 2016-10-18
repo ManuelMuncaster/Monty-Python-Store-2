@@ -77,7 +77,7 @@
             // 
             this.parrotLabel.AutoSize = true;
             this.parrotLabel.ForeColor = System.Drawing.Color.White;
-            this.parrotLabel.Location = new System.Drawing.Point(12, 48);
+            this.parrotLabel.Location = new System.Drawing.Point(12, 53);
             this.parrotLabel.Name = "parrotLabel";
             this.parrotLabel.Size = new System.Drawing.Size(111, 13);
             this.parrotLabel.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             // parrotTextbox
             // 
-            this.parrotTextbox.Location = new System.Drawing.Point(165, 45);
+            this.parrotTextbox.Location = new System.Drawing.Point(175, 50);
             this.parrotTextbox.Name = "parrotTextbox";
             this.parrotTextbox.Size = new System.Drawing.Size(25, 20);
             this.parrotTextbox.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             // helmetTextbox
             // 
-            this.helmetTextbox.Location = new System.Drawing.Point(165, 71);
+            this.helmetTextbox.Location = new System.Drawing.Point(175, 76);
             this.helmetTextbox.Name = "helmetTextbox";
             this.helmetTextbox.Size = new System.Drawing.Size(25, 20);
             this.helmetTextbox.TabIndex = 4;
@@ -114,13 +114,13 @@
             this.sillywalkLabel.ForeColor = System.Drawing.Color.White;
             this.sillywalkLabel.Location = new System.Drawing.Point(12, 106);
             this.sillywalkLabel.Name = "sillywalkLabel";
-            this.sillywalkLabel.Size = new System.Drawing.Size(74, 13);
+            this.sillywalkLabel.Size = new System.Drawing.Size(89, 13);
             this.sillywalkLabel.TabIndex = 5;
-            this.sillywalkLabel.Text = "Silly Walk $20";
+            this.sillywalkLabel.Text = "Silly Walk $20.00";
             // 
             // sillywalkTextbox
             // 
-            this.sillywalkTextbox.Location = new System.Drawing.Point(165, 99);
+            this.sillywalkTextbox.Location = new System.Drawing.Point(175, 103);
             this.sillywalkTextbox.Name = "sillywalkTextbox";
             this.sillywalkTextbox.Size = new System.Drawing.Size(25, 20);
             this.sillywalkTextbox.TabIndex = 6;
@@ -131,13 +131,13 @@
             this.albumLabel.ForeColor = System.Drawing.Color.White;
             this.albumLabel.Location = new System.Drawing.Point(6, 135);
             this.albumLabel.Name = "albumLabel";
-            this.albumLabel.Size = new System.Drawing.Size(153, 13);
+            this.albumLabel.Size = new System.Drawing.Size(168, 13);
             this.albumLabel.TabIndex = 7;
-            this.albumLabel.Text = "\"Lumberjack Song\" Album $25";
+            this.albumLabel.Text = "\"Lumberjack Song\" Album $25.00";
             // 
             // albumTextbox
             // 
-            this.albumTextbox.Location = new System.Drawing.Point(165, 128);
+            this.albumTextbox.Location = new System.Drawing.Point(175, 132);
             this.albumTextbox.Name = "albumTextbox";
             this.albumTextbox.Size = new System.Drawing.Size(25, 20);
             this.albumTextbox.TabIndex = 8;
@@ -166,9 +166,9 @@
             this.spanishLabel.ForeColor = System.Drawing.Color.Red;
             this.spanishLabel.Location = new System.Drawing.Point(12, 222);
             this.spanishLabel.Name = "spanishLabel";
-            this.spanishLabel.Size = new System.Drawing.Size(138, 13);
+            this.spanishLabel.Size = new System.Drawing.Size(153, 13);
             this.spanishLabel.TabIndex = 11;
-            this.spanishLabel.Text = "The Spanish Inquisition $50";
+            this.spanishLabel.Text = "The Spanish Inquisition $50.00";
             // 
             // spanishTextbox
             // 
@@ -188,7 +188,7 @@
             this.calculateButton.TabIndex = 13;
             this.calculateButton.Text = "Calculate!";
             this.calculateButton.UseVisualStyleBackColor = true;
-            this.calculateButton.Click += new System.EventHandler(this.button1_Click);
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // subtotalLabel
             // 
@@ -325,7 +325,7 @@
             // 
             this.errorValueslabel.AutoSize = true;
             this.errorValueslabel.ForeColor = System.Drawing.Color.White;
-            this.errorValueslabel.Location = new System.Drawing.Point(207, 89);
+            this.errorValueslabel.Location = new System.Drawing.Point(207, 92);
             this.errorValueslabel.Name = "errorValueslabel";
             this.errorValueslabel.Size = new System.Drawing.Size(163, 13);
             this.errorValueslabel.TabIndex = 27;

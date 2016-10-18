@@ -67,8 +67,9 @@ namespace Monty_Python_Store
             player.Play();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {  try
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            try
             {
                 //Sound plays after the button is pressed
                 SoundPlayer player = new SoundPlayer(Properties.Resources.fleshwound);
@@ -128,7 +129,8 @@ namespace Monty_Python_Store
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-           try {
+           try
+            {
                 //Plays a sound when you press button
                 SoundPlayer player = new SoundPlayer(Properties.Resources.romans);
                 player.Play();
@@ -142,20 +144,24 @@ namespace Monty_Python_Store
 
                 //if statments to determine if user pays enough money
                 if (tenderedAmount < total)
+                {
                     errorChangelabel.Visible = true;
-                receiptButton.Visible = false;
-                changeOutputlabel.Visible = false;
-                changeLabel.Visible = false;
-                changeOutputlabel.Text = "$" + change;
-               
+                    receiptButton.Visible = false;
+                    changeOutputlabel.Visible = false;
+                    changeLabel.Visible = false;
+                    changeOutputlabel.Text = "$" + change;
+                }
                 if (tenderedAmount >= total)
+                {
                     errorChangelabel.Visible = false;
-                receiptButton.Visible = true;
-                changeOutputlabel.Visible = true;
-                changeLabel.Visible = true;
-
+                    receiptButton.Visible = true;
+                    changeOutputlabel.Visible = true;
+                    changeLabel.Visible = true;
+                }
             }
-            catch { errorChangelabel2.Visible = true;
+            catch
+            {
+                errorChangelabel2.Visible = true;
                 changeLabel.Visible = false;
                 changeOutputlabel.Visible = false;
                 receiptButton.Visible = false;
@@ -171,7 +177,7 @@ namespace Monty_Python_Store
             Graphics fg = this.CreateGraphics();
 
             //Math to increase the order number by 1 each time user prints receipt while program is running
-            orderNumber = orderNumber + 1;
+            orderNumber = orderNumber ++;
             
             //Setting up pens, brushes and fonts
             Pen whitePen = new Pen(Color.White);
@@ -191,17 +197,17 @@ namespace Monty_Python_Store
             Thread.Sleep(1000);
             fg.DrawString("Date: October 14, 2016", blackFont, blackBrush, 375, 60);
             Thread.Sleep(1000);
-            fg.DrawString("Alive Parrot  x " + parrotNumber + " @ " + PARROT_COST, blackFont, blackBrush, 375, 100);
+            fg.DrawString("Alive Parrot x " + parrotNumber + " @ $" + PARROT_COST, blackFont, blackBrush, 375, 100);
             Thread.Sleep(1000);
-            fg.DrawString("Black Knight Helmet  x " + helmetNumber + " @ " + HELMET_COST, blackFont, blackBrush, 375, 120);
+            fg.DrawString("Black Knight Helmet x " + helmetNumber + " @ $" + HELMET_COST, blackFont, blackBrush, 375, 120);
             Thread.Sleep(1000);
-            fg.DrawString("Silly Walk  x " + sillywalkNumber + " @ " + SILLY_WALK_COST, blackFont, blackBrush, 375, 140);
+            fg.DrawString("Silly Walk x " + sillywalkNumber + " @ $" + SILLY_WALK_COST, blackFont, blackBrush, 375, 140);
             Thread.Sleep(1000);
-            fg.DrawString("Lumberjack Song  x " + albumNumber + " @ " + ALBUM_COST, blackFont, blackBrush, 375, 160);
+            fg.DrawString("Lumberjack Song x " + albumNumber + " @ $" + ALBUM_COST, blackFont, blackBrush, 375, 160);
             Thread.Sleep(1000);
-            fg.DrawString("Holy Hand Grenade  x " + grenadeNumber + " @ " + GRENADE_COST, blackFont, blackBrush, 375, 180);
+            fg.DrawString("Holy Hand Grenade x " + grenadeNumber + " @ $" + GRENADE_COST, blackFont, blackBrush, 375, 180);
             Thread.Sleep(1000);
-            fg.DrawString("Spanish Inquisition  x " + spanishNumber + " @ " + SPANISH_COST, blackFont, blackBrush, 375, 200);
+            fg.DrawString("Spanish Inquisition x " + spanishNumber + " @ $" + SPANISH_COST, blackFont, blackBrush, 375, 200);
             Thread.Sleep(1000);
             fg.DrawString("Subtotal: $" + subTotal, blackFont, blackBrush, 375, 230);
             Thread.Sleep(1000);
