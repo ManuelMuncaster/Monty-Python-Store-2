@@ -39,7 +39,7 @@ namespace Monty_Python_Store
         double total;
         double taxTotal;
         int orderNumber;
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -129,7 +129,7 @@ namespace Monty_Python_Store
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-           try
+            try
             {
                 //Plays a sound when you press button
                 SoundPlayer player = new SoundPlayer(Properties.Resources.romans);
@@ -166,7 +166,7 @@ namespace Monty_Python_Store
                 changeOutputlabel.Visible = false;
                 receiptButton.Visible = false;
             }
-    }
+        }
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
@@ -177,8 +177,8 @@ namespace Monty_Python_Store
             Graphics fg = this.CreateGraphics();
 
             //Math to increase the order number by 1 each time user prints receipt while program is running
-            orderNumber = orderNumber ++;
-            
+            orderNumber = orderNumber++;
+
             //Setting up pens, brushes and fonts
             Pen whitePen = new Pen(Color.White);
             Brush whiteBrush = new SolidBrush(Color.White);
@@ -228,7 +228,7 @@ namespace Monty_Python_Store
             player2.Play();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void neworderButton_Click(object sender, EventArgs e)
         {
             //Resetting all of the textboxes to 0 and clearing the receipt
             Graphics formGraphics = this.CreateGraphics();
@@ -262,7 +262,7 @@ namespace Monty_Python_Store
             spanishNumber = 0;
 
             Brush blackBrush = new SolidBrush(Color.Black);
-            Pen blackPen = new Pen (Color.Black);
+            Pen blackPen = new Pen(Color.Black);
 
             formGraphics.FillRectangle(blackBrush, 375, 10, 300, 500);
             formGraphics.DrawRectangle(blackPen, 375, 10, 300, 500);

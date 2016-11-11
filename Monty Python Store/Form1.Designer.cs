@@ -1,4 +1,6 @@
-﻿namespace Monty_Python_Store
+﻿using System;
+
+namespace Monty_Python_Store
 {
     partial class Form1
     {
@@ -65,11 +67,11 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Stencil Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(4, 9);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(366, 21);
+            this.titleLabel.Size = new System.Drawing.Size(301, 20);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Welcome to the Monty Python Store!";
             // 
@@ -357,13 +359,13 @@
             // 
             this.neworderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.neworderButton.ForeColor = System.Drawing.Color.White;
-            this.neworderButton.Location = new System.Drawing.Point(192, 535);
+            this.neworderButton.Location = new System.Drawing.Point(210, 535);
             this.neworderButton.Name = "neworderButton";
             this.neworderButton.Size = new System.Drawing.Size(153, 23);
             this.neworderButton.TabIndex = 30;
             this.neworderButton.Text = "New Order!";
             this.neworderButton.UseVisualStyleBackColor = true;
-            this.neworderButton.Click += new System.EventHandler(this.button1_Click_1);
+            this.neworderButton.Click += new System.EventHandler(this.neworderButton_Click);
             // 
             // Form1
             // 
@@ -408,6 +410,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void newOrderbutton_Click_1(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion
